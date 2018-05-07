@@ -126,10 +126,15 @@ def options():
     print('   )o_o(')
     print('  (_/ \_)')
     print(' ')
-    print('[1] Make sure terminal is resized correctlly')
-    print('[2] Music On or Off')
-    print('[3]')
+    print('[1] Make sure terminal is resized correctlly(Not working)')
+    print('[2] Music On or Off(Not working)')
+    print('[3] Credits(Working)')
     optioncontrol = input('')
+    if optioncontrol == '3':
+        os.system('clear')
+        print('Made by Lucien Hammond')
+        print('I use PyDB which was created by Matthew Gallant on Github')
+        oof = input('Hit enter to continue')
 
     
 
