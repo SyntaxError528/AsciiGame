@@ -3,6 +3,7 @@ import sys
 import os
 from pygame import mixer
 import PyDB as db
+import time
 
 #Variable setup
 oldname = db.get('name')
@@ -103,9 +104,9 @@ def newgame(oldname):
             pass
     else:
         pass
-
-def loadgame():
-    print("Not yet Boi")
+    
+    
+    
 '''
 get location
 get name
@@ -156,15 +157,36 @@ while True:
     if menudeci == '1':
         newgame(oldname)
     elif menudeci == '2':
-        loadgame()
+        # Load game:
+        print("Its not ready yet")
+        time.sleep(3)
+        print('Get out of here Matt')
+        time.sleep(5)
+        Exit = input('Hit enter to continue')
+        xloc = db.get("xloc")
+        yloc = db.get("yloc")
+        print('Welcome mostly Matt and Jacob.')
+        
         # Main Game loop
         while Exit != 0:
-            oof
-          
-
-
-
-
+            
+            xloc = int(xloc)
+            yloc = int(yloc)
+            decision = input('Command here: ')
+            if decision == 'north':
+                yloc = yloc + 1
+            elif decision == 'south':
+                yloc = yloc - 1
+            elif decision == 'east':
+                xloc = xloc + 1
+            elif decision == 'west':
+                xloc = xloc - 1
+            elif decision == 'exit':
+                break
+            else:
+                print('Invalid command')
+            print('You moved ' + decision + '. Your current position is ' + str(xloc) + ", " + str(yloc))
+                
     elif menudeci == '3':
         options()
     elif menudeci == '4':
