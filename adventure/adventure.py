@@ -7,6 +7,17 @@ import time
 
 #Variable setup
 oldname = db.get('name')
+#Jacob's class for colors in the terminal
+class bcolors:
+    #text colors
+    HEADER = '\033[0m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[31m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 #Menu screen
 
@@ -135,9 +146,10 @@ def options():
         os.system('clear')
         print('Made by Lucien Hammond')
         print('I use PyDB which was created by Matthew Gallant on Github')
+        print('I used some code to use colored text in the terminal which was taken from Jacob Mealys basegame')
         oof = input('Hit enter to continue')
 
-    
+
 
 
 Exit = 1
@@ -158,10 +170,8 @@ while True:
         newgame(oldname)
     elif menudeci == '2':
         # Load game:
-        print("Its not ready yet")
+        print("Hello " + oldname + ". Welcome to your quest.")
         time.sleep(3)
-        print('Get out of here Matt')
-        time.sleep(5)
         Exit = input('Hit enter to continue')
         xloc = db.get("xloc")
         yloc = db.get("yloc")
