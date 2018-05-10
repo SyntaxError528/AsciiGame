@@ -215,7 +215,7 @@ def music():
         mixer.music.stop()
         pass
 
-def fight():
+
 
 
 #Menu Loop
