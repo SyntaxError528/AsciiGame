@@ -218,7 +218,6 @@ def music():
 def fight():
 
 
-Exit = 1
 #Menu Loop
 while True:
     
